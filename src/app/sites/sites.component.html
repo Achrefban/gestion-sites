@@ -1,0 +1,36 @@
+ <div id="data-grid-demo">
+    <dx-data-grid 
+        id="gridContainer"
+        [dataSource]="sites"
+        keyExpr="siteId"
+        [rowAlternationEnabled]="true"
+        [showRowLines]="true"
+        [showBorders]="true"
+        (onRowInserted)="create($event)"
+        (onRowRemoved)="delete($event)"
+        (onRowUpdated)="update($event)"
+        (onSelectionChanged)="rowSelectedHandler($event)"
+        [hoverStateEnabled]="true" >
+        <dxo-texts confirmDeleteMessage="Êtes-vous sûr de vouloir supprimer ce site ? "></dxo-texts>
+        <dxo-selection mode="single"></dxo-selection>
+        <dxo-export [enabled]="true" fileName="Sites" [allowExportSelectedData]="true"></dxo-export>
+        <dxo-paging [enabled]="false"></dxo-paging>
+        <dxo-editing 
+            mode="form"
+            [allowUpdating]="true"
+            [allowAdding]="true"
+            [allowDeleting]="true"
+            [useIcons]="true">
+        </dxo-editing>
+        <dxi-column dataField="siteId" caption="Id site" [width]="70" ></dxi-column>
+        <dxi-column dataField="siteName" caption = "Nom du site"></dxi-column>
+        <dxi-column dataField="newSiteName" caption="new site name"></dxi-column>
+        <dxi-column dataField="projectPhase" caption = "Project Phase"></dxi-column>
+        <dxi-column dataField="region" caption ="Région"></dxi-column>
+        <dxi-column dataField="city" caption ="City"></dxi-column>
+        <dxi-column dataField="siteType" caption ="Site type"></dxi-column>
+        <dxi-column dataField="longitude" caption="Longitude"></dxi-column>
+        <dxi-column dataField="lattitude" caption="Lattitude"></dxi-column>
+    </dx-data-grid>
+
+</div>

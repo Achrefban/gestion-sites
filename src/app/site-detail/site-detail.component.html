@@ -1,0 +1,199 @@
+<div id="form-container">
+    <dx-form id="form"
+        [formData]="site">
+        <dxi-item itemType="group" >
+            <dxi-item itemType="tabbed" >
+                <dxi-tab title="Cellules 3G">
+                  <dxi-item> 
+                      <dx-data-grid 
+                          id="grid"
+                          [dataSource]="site.troisGCell"
+                          keyExpr="cellId"
+                          [rowAlternationEnabled]="true"
+                          [showRowLines]="true"
+                          [showBorders]="true"
+                          [columnAutoWidth]="true">	
+                          <dxo-scrolling [columnRenderingMode]="virtual"></dxo-scrolling>
+                          <dxo-paging [enabled]="false"></dxo-paging>
+                            <dxo-editing 
+                                mode="form"
+                                [allowUpdating]="true"
+                                [allowAdding]="true"
+                                [allowDeleting]="true"
+                                [useIcons]="true">
+                          </dxo-editing>
+                          <dxi-column dataField="id"></dxi-column>
+                          <dxi-column dataField="cellId"></dxi-column>
+                          <dxi-column dataField="localCellId"></dxi-column>
+                          <dxi-column dataField="cellName"></dxi-column>
+                          <dxi-column dataField="bscName"></dxi-column>
+                          <dxi-column dataField="mcc"></dxi-column>
+                          <dxi-column dataField="mnc"></dxi-column>
+                          <dxi-column dataField="lac"></dxi-column>
+                          <dxi-column dataField="rac"></dxi-column>
+                          <dxi-column dataField="sac"></dxi-column>
+                          <dxi-column dataField="frequencyDl"></dxi-column>
+                          <dxi-column dataField="uarfcn"></dxi-column>
+                          <dxi-column dataField="scramblingCode"></dxi-column>
+                          <dxi-column dataField="antennaType"></dxi-column>
+                          <dxi-column dataField="antennaHeight"></dxi-column>
+                          <dxi-column dataField="azimuth"></dxi-column>
+                          <dxi-column dataField="mechanicalTilt"></dxi-column>
+                          <dxi-column dataField="electricalTilt"></dxi-column>
+                          <dxi-column dataField="antGain"></dxi-column>
+                          <dxi-column dataField="tmaType"></dxi-column>
+                          <dxi-column dataField="cpichPower"></dxi-column>
+                          <dxi-column dataField="lienLub"></dxi-column>
+                          <dxi-column dataField="dateCreation"></dxi-column>
+                      </dx-data-grid>
+                      </dxi-item>
+                      </dxi-tab>
+                      <dxi-tab title="Cellules 2G900">
+                        <dxi-item> 
+                            <dx-data-grid 
+                                id="gridB"
+                                [dataSource]="site.deuxGNeufCentCell"
+                                keyExpr="cellId"
+                                [rowAlternationEnabled]="true"
+                                [showRowLines]="true"
+                                [showBorders]="true"
+                                [columnAutoWidth]="true">
+                                <dxo-scrolling [columnRenderingMode]="virtual"></dxo-scrolling>	
+                                <dxo-paging [enabled]="false"></dxo-paging>
+                                  <dxo-editing 
+                                      mode="form"
+                                      [allowUpdating]="true"
+                                      [allowAdding]="true"
+                                      [allowDeleting]="true"
+                                      [useIcons]="true">
+                                </dxo-editing>
+                                <dxi-column dataField="id"></dxi-column>
+                                <dxi-column dataField="cellId"></dxi-column>
+                                <dxi-column dataField="cellName"></dxi-column>
+                                <dxi-column dataField="bscName"></dxi-column>
+                                <dxi-column dataField="mcc"></dxi-column>
+                                <dxi-column dataField="mnc"></dxi-column>
+                                <dxi-column dataField="lac"></dxi-column>
+                                <dxi-column dataField="rac"></dxi-column>
+                                <dxi-column dataField="bcch"></dxi-column>
+                                <dxi-column dataField="tch"></dxi-column>
+                                <dxi-column dataField="bsic"></dxi-column>
+                                <dxi-column dataField="ncc"></dxi-column>
+                                <dxi-column dataField="bcc"></dxi-column>
+                                <dxi-column dataField="fhMod"></dxi-column>
+                                <dxi-column dataField="hsn"></dxi-column>
+                                <dxi-column dataField="ma"></dxi-column>
+                                <dxi-column dataField="maio"></dxi-column>
+                                <dxi-column dataField="gprs"></dxi-column>
+                                <dxi-column dataField="edge"></dxi-column>
+                                <dxi-column dataField="antennaType"></dxi-column>
+                                <dxi-column dataField="antennaHeight"></dxi-column>
+                                <dxi-column dataField="azimuth"></dxi-column>
+                                <dxi-column dataField="mechanicalTilt"></dxi-column>
+                                <dxi-column dataField="electricalTilt"></dxi-column>
+                                <dxi-column dataField="antGain"></dxi-column>
+                                <dxi-column dataField="tmaType"></dxi-column>
+                                <dxi-column dataField="dateCreation"></dxi-column>
+                            </dx-data-grid>
+                            </dxi-item>
+                            </dxi-tab>
+                            <dxi-tab title="Cellules 2G1800">
+                                <dxi-item> 
+                                    <dx-data-grid 
+                                        id="gridC"
+                                        [dataSource]="site.deuxGCell"
+                                        keyExpr="cellId"
+                                        [rowAlternationEnabled]="true"
+                                        [showRowLines]="true"
+                                        [showBorders]="true"
+                                        [columnAutoWidth]="true">
+                                        <dxo-scrolling [columnRenderingMode]="virtual"></dxo-scrolling>	
+                                        <dxo-paging [enabled]="false"></dxo-paging>
+                                          <dxo-editing 
+                                              mode="form"
+                                              [allowUpdating]="true"
+                                              [allowAdding]="true"
+                                              [allowDeleting]="true"
+                                              [useIcons]="true">
+                                        </dxo-editing>
+                                        <dxi-column dataField="id"></dxi-column>
+                                        <dxi-column dataField="cellId"></dxi-column>
+                                        <dxi-column dataField="cellName"></dxi-column>
+                                        <dxi-column dataField="bscName"></dxi-column>
+                                        <dxi-column dataField="mcc"></dxi-column>
+                                        <dxi-column dataField="mnc"></dxi-column>
+                                        <dxi-column dataField="lac"></dxi-column>
+                                        <dxi-column dataField="rac"></dxi-column>
+                                        <dxi-column dataField="bcch"></dxi-column>
+                                        <dxi-column dataField="tch"></dxi-column>
+                                        <dxi-column dataField="bsic"></dxi-column>
+                                        <dxi-column dataField="ncc"></dxi-column>
+                                        <dxi-column dataField="bcc"></dxi-column>
+                                        <dxi-column dataField="fhMod"></dxi-column>
+                                        <dxi-column dataField="hsn"></dxi-column>
+                                        <dxi-column dataField="ma"></dxi-column>
+                                        <dxi-column dataField="maio"></dxi-column>
+                                        <dxi-column dataField="gprs"></dxi-column>
+                                        <dxi-column dataField="edge"></dxi-column>
+                                        <dxi-column dataField="antennaType"></dxi-column>
+                                        <dxi-column dataField="antennaHeight"></dxi-column>
+                                        <dxi-column dataField="azimuth"></dxi-column>
+                                        <dxi-column dataField="mechanicalTilt"></dxi-column>
+                                        <dxi-column dataField="electricalTilt"></dxi-column>
+                                        <dxi-column dataField="antGain"></dxi-column>
+                                        <dxi-column dataField="tmaType"></dxi-column>
+                                        <dxi-column dataField="dateCreation"></dxi-column>
+                                    </dx-data-grid>
+                                    </dxi-item>
+                                    </dxi-tab>
+                                    <dxi-tab title="Cellules 4G L1800">
+                                        <dxi-item> 
+                                            <dx-data-grid 
+                                                id="gridD"
+                                                [dataSource]="site.quatreGCell"
+                                                keyExpr="id"
+                                                [rowAlternationEnabled]="true"
+                                                [showRowLines]="true"
+                                                [showBorders]="true"
+                                                [columnAutoWidth]="true">
+                                                <dxo-scrolling [columnRenderingMode]="virtual"></dxo-scrolling>	
+                                                <dxo-paging [enabled]="false"></dxo-paging>
+                                                  <dxo-editing 
+                                                      mode="form"
+                                                      [allowUpdating]="true"
+                                                      [allowAdding]="true"
+                                                      [allowDeleting]="true"
+                                                      [useIcons]="true">
+                                                </dxo-editing>
+                                                <dxi-column dataField="id"></dxi-column>
+                                                <dxi-column dataField="cnOperatorId"></dxi-column>
+                                                <dxi-column dataField="cellName"></dxi-column>
+                                                <dxi-column dataField="sectorId"></dxi-column>
+                                                <dxi-column dataField="eNodebNumber"></dxi-column>
+                                                <dxi-column dataField="pci"></dxi-column>
+                                                <dxi-column dataField="DLEARFCN"></dxi-column>
+                                                <dxi-column dataField="RefereceSignalPwr"></dxi-column>
+                                                <dxi-column dataField="pa"></dxi-column>
+                                                <dxi-column dataField="pb"></dxi-column>
+                                                <dxi-column dataField="tac"></dxi-column>
+                                                <dxi-column dataField="SGSN"></dxi-column>
+                                                <dxi-column dataField="BandWidth"></dxi-column>
+                                                <dxi-column dataField="TxRxMode"></dxi-column>
+                                                <dxi-column dataField="NCS"></dxi-column>
+                                                <dxi-column dataField="cellRadius"></dxi-column>
+                                                <dxi-column dataField="rootSeqIndex"></dxi-column>
+                                                <dxi-column dataField="Hemisphere"></dxi-column>
+                                                <dxi-column dataField="retControlPort"></dxi-column>
+                                                <dxi-column dataField="orangeCity"></dxi-column>
+                                                <dxi-column dataField="clusterName"></dxi-column>
+                                                <dxi-column dataField="azimuth"></dxi-column>
+                                                <dxi-column dataField="mechanicalTilt"></dxi-column>
+                                                <dxi-column dataField="electricalTilt"></dxi-column>
+                                            </dx-data-grid>
+                                            </dxi-item>
+                                            </dxi-tab>
+                </dxi-item>
+                </dxi-item>
+                </dx-form>
+                </div>
+
